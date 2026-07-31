@@ -97,7 +97,7 @@ body {
 }
 
 .hero.fmcg-hero {
-  background: #152a20 !important;
+  background: #2d3b27 !important;
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
@@ -136,7 +136,7 @@ body {
 }
 
 .fmcg-body {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
   font-size: 1.05rem !important;
   line-height: 1.65 !important;
   max-width: 580px;
@@ -166,29 +166,30 @@ body {
   border-color: #ffffff !important;
 }
 
-/* Clean Boxless Logo Styling */
+/* Seamless Boxless Logo Styling (Matches #2d3b27 background exactly) */
 .fmcg-hero-brand-clean {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 520px;
+  max-width: 540px;
   margin-left: auto;
 }
 
 .fmcg-brand-logo-clean-img {
   width: 100%;
-  max-width: 500px;
+  max-width: 520px;
   height: auto;
   object-fit: contain;
-  border-radius: 1.5rem;
+  border-radius: 0 !important;
   display: block;
-  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.7));
+  box-shadow: none !important;
+  filter: none !important;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .fmcg-brand-logo-clean-img:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .business-page-content {
