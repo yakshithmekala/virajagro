@@ -97,7 +97,7 @@ body {
 }
 
 .hero.fmcg-hero {
-  background: linear-gradient(110deg, rgba(8, 16, 30, .86), rgba(11, 31, 58, .6)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+  background: linear-gradient(110deg, rgba(8, 16, 30, .75), rgba(11, 31, 58, .55)), url('forefathers-naturals.png') center/cover no-repeat fixed;
 }
 
 .business-page-content {
