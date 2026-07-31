@@ -97,7 +97,7 @@ body {
 }
 
 .hero.fmcg-hero {
-  background: #334729 !important;
+  background: linear-gradient(135deg, #070d14 0%, #0b1812 50%, #060e0a 100%) !important;
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
@@ -105,9 +105,9 @@ body {
 
 .hero-content.split-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
   width: 100%;
 }
 
@@ -144,16 +144,16 @@ body {
 
 .fmcg-btn-gold {
   background: #eab308 !important;
-  color: #0c1c15 !important;
+  color: #070d14 !important;
   font-weight: 800 !important;
   border: none !important;
-  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.3);
+  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.35);
 }
 
 .fmcg-btn-gold:hover {
   background: #facc15 !important;
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(234, 179, 8, 0.45);
+  box-shadow: 0 12px 30px rgba(234, 179, 8, 0.5);
 }
 
 .fmcg-btn-outline {
@@ -166,31 +166,39 @@ body {
   border-color: #ffffff !important;
 }
 
-/* Shifted Left Boxless Logo Styling (Matches #334729 background) */
+/* Luxury Dark Hero Logo Badge (Gold Rimmed Glass Card) */
 .fmcg-hero-brand-clean {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 0.8rem;
+  background: rgba(18, 30, 22, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  border-radius: 1.8rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   width: 100%;
-  max-width: 540px;
-  margin-left: -1rem;
+  max-width: 520px;
+  margin-left: 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.fmcg-hero-brand-clean:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(234, 179, 8, 0.25);
+  border-color: #eab308;
 }
 
 .fmcg-brand-logo-clean-img {
   width: 100%;
-  max-width: 520px;
+  max-width: 480px;
   height: auto;
   object-fit: contain;
-  border-radius: 0 !important;
+  border-radius: 1.4rem;
   display: block;
-  box-shadow: none !important;
-  filter: none !important;
-  transform: translateX(-15px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.fmcg-brand-logo-clean-img:hover {
-  transform: translateX(-15px) scale(1.03);
 }
 
 .business-page-content {
