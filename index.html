@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
   <header class="site-header" id="top">
     <nav class="navbar container">
       <a href="#home" class="brand" aria-label="Viraj Holdings home">
@@ -41,10 +42,30 @@
         </div>
         <a href="#Blogs">Blogs</a>
         <a href="#contact">Contact</a>
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme mode" title="Toggle Glass / Dark Mode">🌙</button>
         <a href="#contact" class="button button-solid nav-cta">Partner With Us</a>
       </div>
     </nav>
   </header>
+
+  <!-- Marquee Global Ecosystem Ticker Bar -->
+  <div class="marquee-ticker-bar">
+    <div class="marquee-track">
+      <span>🌟 30+ Years of Combined Agriculture Expertise</span>
+      <span>🌾 25+ International Export Destinations</span>
+      <span>⚙️ High-Capacity Seed Processing &amp; Cotton Ginning</span>
+      <span>📦 Direct Buyback &amp; Farmer Procurement</span>
+      <span>🧴 Organic FMCG Pure Formulations</span>
+      <span>🌍 ISO 9001:2015 Quality Compliant</span>
+      <!-- Duplicate loop track -->
+      <span>🌟 30+ Years of Combined Agriculture Expertise</span>
+      <span>🌾 25+ International Export Destinations</span>
+      <span>⚙️ High-Capacity Seed Processing &amp; Cotton Ginning</span>
+      <span>📦 Direct Buyback &amp; Farmer Procurement</span>
+      <span>🧴 Organic FMCG Pure Formulations</span>
+      <span>🌍 ISO 9001:2015 Quality Compliant</span>
+    </div>
+  </div>
 
   <main id="home">
     <section class="hero">
@@ -109,8 +130,77 @@
     <section class="section about" id="about">
       <div class="container split-grid">
         <div class="about-media reveal">
-          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
-            alt="Corporate leadership team and industrial operations" loading="lazy" />
+          <div class="infinity-loop-showcase" id="infinityLoopShowcase">
+            <!-- Background 3D Infinity Island Image -->
+            <div class="infinity-island-bg" style="background-image: url('bg1.jpg');"></div>
+            <div class="infinity-island-overlay"></div>
+
+            <!-- Orbiting Stage Hotspot Nodes -->
+            <div class="loop-node node-1 active" data-stage="1" data-title="Agro Inputs &amp; Seeds">
+              <span class="node-icon">🌾</span>
+              <div class="node-tooltip">
+                <strong>Stage 1: Agro Inputs</strong>
+                <span>Quality seeds &amp; crop nutrition</span>
+              </div>
+            </div>
+
+            <div class="loop-node node-2" data-stage="2" data-title="Agro Industries &amp; Ginning">
+              <span class="node-icon">⚙️</span>
+              <div class="node-tooltip">
+                <strong>Stage 2: Agro Industries</strong>
+                <span>Seed processing &amp; cotton ginning</span>
+              </div>
+            </div>
+
+            <div class="loop-node node-3" data-stage="3" data-title="Commodity Trading">
+              <span class="node-icon">📦</span>
+              <div class="node-tooltip">
+                <strong>Stage 3: Commodity Trade</strong>
+                <span>Direct procurement &amp; grain logistics</span>
+              </div>
+            </div>
+
+            <div class="loop-node node-4" data-stage="4" data-title="Global EXIM Shipping">
+              <span class="node-icon">🌍</span>
+              <div class="node-tooltip">
+                <strong>Stage 4: Global EXIM</strong>
+                <span>Export to 25+ international markets</span>
+              </div>
+            </div>
+
+            <div class="loop-node node-5" data-stage="5" data-title="FMCG Consumer Goods">
+              <span class="node-icon">🧴</span>
+              <div class="node-tooltip">
+                <strong>Stage 5: FMCG Brands</strong>
+                <span>Farm-to-table consumer products</span>
+              </div>
+            </div>
+
+            <!-- Overlay Glass HUD -->
+            <div class="loop-hud-top">
+              <div class="video-badge">
+                <span class="live-dot"></span> 3D ECOSYSTEM LOOP
+              </div>
+              <div class="loop-stage-indicator" id="loopStageTag">STAGE 1: AGRO INPUTS</div>
+            </div>
+
+            <button type="button" class="video-play-btn center-loop-btn" id="playLoopVideoBtn" aria-label="Play 5 sec infinity ecosystem reel">
+              <span class="play-icon">🔄</span>
+            </button>
+
+            <div class="loop-hud-bottom">
+              <div class="video-scrubber-track">
+                <div class="video-scrubber-fill" id="loopScrubber"></div>
+              </div>
+              <div class="video-caption-bar">
+                <div>
+                  <strong>Integrated Infinity Ecosystem</strong>
+                  <span id="loopCaptionSub">Connecting Agriculture, Manufacturing &amp; Global Trade</span>
+                </div>
+                <div class="loop-badge-tag">🔄 5 SEC LOOP</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="about-copy reveal">
           <p class="eyebrow">About Viraj Holdings</p>
@@ -132,65 +222,100 @@
           <p class="eyebrow">Our Businesses</p>
           <h2>Six pillars of growth, innovation and value creation.</h2>
         </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="business-tabs-wrapper reveal">
+          <div class="business-tabs">
+            <button class="tab-btn active" data-filter="all">✨ All Businesses</button>
+            <button class="tab-btn" data-filter="agri">🌾 Agri Inputs</button>
+            <button class="tab-btn" data-filter="trade">📦 Commodity Trading</button>
+            <button class="tab-btn" data-filter="industry">⚙️ Agro Industries</button>
+            <button class="tab-btn" data-filter="exim">🌍 Export & Import</button>
+            <button class="tab-btn" data-filter="fmcg">🧴 FMCG</button>
+          </div>
+        </div>
+
         <div class="card-grid">
-          <article class="business-card reveal" data-href="agro-inputs.html">
-            <img src="assets/agro-inputs.svg" alt="Agriculture inputs field" loading="lazy" />
+          <article class="business-card reveal" data-category="agri" data-href="agro-inputs.html">
+            <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=900&q=80" alt="Agriculture inputs field" loading="lazy" />
             <div class="card-content">
               <div class="icon-badge">🌾</div>
               <h3>Agro Inputs</h3>
               <p>Helping farmers with quality seeds, crop nutrition, crop protection, farm mechanization, and
                 sustainable agricultural solutions.</p>
-              <a href="agro-inputs.html">Learn More</a>
+              <div class="card-actions-row">
+                <a href="agro-inputs.html" class="button-link">Learn More →</a>
+                <button type="button" class="quick-preview-btn" data-modal="agro-inputs">Quick View ✨</button>
+              </div>
             </div>
           </article>
-          <article class="business-card reveal" data-href="commodity-trading.html">
-            <img src="assets/commodity.svg" alt="Commodity trading and logistics" loading="lazy" />
+
+          <article class="business-card reveal" data-category="trade" data-href="commodity-trading.html">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80" alt="Commodity trading and logistics" loading="lazy" />
             <div class="card-content">
               <div class="icon-badge">📦</div>
               <h3>Commodity Trading</h3>
               <p>Reliable sourcing, procurement, quality assurance, logistics, and agricultural commodity trading
                 connecting producers with domestic and international markets.</p>
-              <a href="commodity-trading.html">Learn More</a>
+              <div class="card-actions-row">
+                <a href="commodity-trading.html" class="button-link">Learn More →</a>
+                <button type="button" class="quick-preview-btn" data-modal="commodity-trading">Quick View ✨</button>
+              </div>
             </div>
           </article>
-          <article class="business-card reveal" data-href="agro-industries.html">
-            <img src="assets/agro-industries.svg" alt="Modern agro industry processing facility" loading="lazy" />
+
+          <article class="business-card reveal" data-category="industry" data-href="agro-industries.html">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80" alt="Modern agro industry processing facility" loading="lazy" />
             <div class="card-content">
               <div class="icon-badge">⚙️</div>
               <h3>Agro Industries</h3>
               <p>Modern processing facilities delivering seed processing, cotton ginning, grading, packaging, and
                 value-added agricultural manufacturing.</p>
-              <a href="agro-industries.html">Learn More</a>
+              <div class="card-actions-row">
+                <a href="agro-industries.html" class="button-link">Learn More →</a>
+                <button type="button" class="quick-preview-btn" data-modal="agro-industries">Quick View ✨</button>
+              </div>
             </div>
           </article>
-          <article class="business-card reveal" data-href="export-import.html">
-            <img src="assets/trade.svg" alt="Port and global logistics" loading="lazy" />
+
+          <article class="business-card reveal" data-category="exim" data-href="export-import.html">
+            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80" alt="Port and global logistics" loading="lazy" />
             <div class="card-content">
               <div class="icon-badge">🌍</div>
               <h3>Export & Import</h3>
               <p>Connecting Indian agricultural products with global markets through efficient international trade and
                 logistics.</p>
-              <a href="export-import.html">Learn More</a>
+              <div class="card-actions-row">
+                <a href="export-import.html" class="button-link">Learn More →</a>
+                <button type="button" class="quick-preview-btn" data-modal="export-import">Quick View ✨</button>
+              </div>
             </div>
           </article>
-          <article class="business-card reveal" data-href="fmcg.html">
-            <img src="assets/fmcg.svg" alt="Premium FMCG packaging and products" loading="lazy" />
+
+          <article class="business-card reveal" data-category="fmcg" data-href="fmcg.html">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80" alt="Premium FMCG packaging and products" loading="lazy" />
             <div class="card-content">
               <div class="icon-badge">🧴</div>
               <h3>FMCG</h3>
               <p>Developing quality consumer products backed by an integrated agricultural and manufacturing ecosystem.
               </p>
-              <a href="fmcg.html">Learn More</a>
+              <div class="card-actions-row">
+                <a href="fmcg.html" class="button-link">Learn More →</a>
+                <button type="button" class="quick-preview-btn" data-modal="fmcg">Quick View ✨</button>
+              </div>
             </div>
           </article>
-          <article class="business-card reveal" data-href="commodity-trading.html">
-            <img src="assets/commodity.svg" alt="Commodity trading and logistics" loading="lazy" />
+
+          <article class="business-card reveal" data-category="agri" data-href="agro-inputs.html">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Sustainable Farms and Sourcing" loading="lazy" />
             <div class="card-content">
-              <div class="icon-badge">📦</div>
-              <h3>Farms</h3>
-              <p>Reliable sourcing, procurement, quality assurance, logistics, and agricultural commodity trading
-                connecting producers with domestic and international markets.</p>
-              <a href="commodity-trading.html">Learn More</a>
+              <div class="icon-badge">🌾</div>
+              <h3>Sustainable Farms</h3>
+              <p>Direct farm partnerships, buyback programs, and precision agriculture initiatives supporting farming communities.</p>
+              <div class="card-actions-row">
+                <a href="agro-inputs.html" class="button-link">Learn More →</a>
+                <button type="button" class="quick-preview-btn" data-modal="farms">Quick View ✨</button>
+              </div>
             </div>
           </article>
         </div>
@@ -450,6 +575,73 @@
             </div>
           </article>
         </div>
+    <!-- Interactive Impact & Sourcing Simulator -->
+    <section class="section simulator-section" id="simulator">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Interactive Ecosystem Calculator</p>
+          <h2>Simulate Your Agri-Enterprise Impact</h2>
+          <p>Estimate the value, yield boost, and farmer empowerment generated through Viraj Holdings integrated value chain.</p>
+        </div>
+
+        <div class="simulator-card reveal">
+          <div class="simulator-controls">
+            <div class="sim-slider-group">
+              <div class="slider-label-row">
+                <label for="landSlider">🌾 Cultivated Land Area:</label>
+                <strong id="landVal">500 Hectares</strong>
+              </div>
+              <input type="range" id="landSlider" min="50" max="5000" step="50" value="500" class="sim-range">
+            </div>
+
+            <div class="sim-slider-group">
+              <div class="slider-label-row">
+                <label for="tonnesSlider">📦 Annual Produce Output:</label>
+                <strong id="tonnesVal">1,000 Metric Tonnes</strong>
+              </div>
+              <input type="range" id="tonnesSlider" min="100" max="10000" step="100" value="1000" class="sim-range">
+            </div>
+
+            <div class="sim-slider-group">
+              <div class="slider-label-row">
+                <label for="regionSelect">🌍 Primary Trade Region:</label>
+              </div>
+              <select id="regionSelect" class="sim-select">
+                <option value="1.2">Asia-Pacific &amp; Domestic India (1.2x Synergy)</option>
+                <option value="1.4" selected>Middle East &amp; GCC (1.4x Synergy)</option>
+                <option value="1.6">Europe &amp; UK (1.6x Synergy)</option>
+                <option value="1.8">Americas &amp; Africa (1.8x Synergy)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="simulator-results-panel">
+            <div class="sim-result-badge">✨ LIVE IMPACT METRICS</div>
+            <div class="sim-result-grid">
+              <div class="sim-metric-item">
+                <span class="sim-icon">🧑‍🌾</span>
+                <strong id="farmersCalc">1,250</strong>
+                <span>Farmers Empowered</span>
+              </div>
+              <div class="sim-metric-item">
+                <span class="sim-icon">📈</span>
+                <strong id="yieldCalc">+38%</strong>
+                <span>Yield Efficiency Boost</span>
+              </div>
+              <div class="sim-metric-item">
+                <span class="sim-icon">💎</span>
+                <strong id="valueCalc">₹ 14.2 Cr</strong>
+                <span>Estimated Value Created</span>
+              </div>
+              <div class="sim-metric-item">
+                <span class="sim-icon">🛡️</span>
+                <strong id="purityCalc">99.6%</strong>
+                <span>Quality Purity Index</span>
+              </div>
+            </div>
+            <a href="#contact" class="button button-solid sim-cta-btn">Partner With Viraj Holdings →</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -508,7 +700,32 @@
         <p>© 2026 Viraj Holdings. All rights reserved.</p>
       </div>
     </div>
-  </footer>
+  <!-- Quick View Glass Modal -->
+  <div class="quick-modal-overlay" id="quickModalOverlay" aria-hidden="true">
+    <div class="quick-modal-card" id="quickModalCard" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-badge" id="modalBadge">Pillar Overview</div>
+      <h3 class="modal-title" id="modalTitle">Business Title</h3>
+      <p class="modal-description" id="modalDesc">Detailed description goes here...</p>
+      
+      <div class="modal-highlights" id="modalHighlights">
+        <div class="modal-highlight-item">
+          <strong id="modalStat1">Quality Seeds</strong>
+          <span>High-yielding hybrids</span>
+        </div>
+        <div class="modal-highlight-item">
+          <strong id="modalStat2">Buyback Guarantee</strong>
+          <span>Empowering farmers</span>
+        </div>
+      </div>
+
+      <div class="modal-cta-row">
+        <a href="#" class="button button-solid" id="modalPageLink">Explore Dedicated Page →</a>
+        <button type="button" class="button button-outline light" id="modalCloseCta">Close</button>
+      </div>
+    </div>
+  <!-- Floating Back To Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>

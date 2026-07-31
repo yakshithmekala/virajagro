@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
   <header class="site-header" id="top">
     <nav class="navbar container">
       <a href="index.html" class="brand" aria-label="Viraj Holdings home">
@@ -74,7 +75,10 @@
     <section class="section business-page-section" id="who-we-are">
       <div class="container split-grid">
         <div class="about-media reveal-left">
-          <img src="assets/agro-inputs.svg" alt="Agro Inputs operations" loading="lazy" />
+          <div class="subpage-media-container">
+            <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=1200&q=80" alt="Agro Inputs operations" loading="lazy" class="subpage-feature-img" />
+            <div class="subpage-img-badge">🌾 Hybrid Seed Research &amp; Crop Solutions</div>
+          </div>
         </div>
         <div class="about-copy reveal-right">
           <p class="eyebrow">Who We Are</p>
@@ -413,6 +417,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Back To Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>

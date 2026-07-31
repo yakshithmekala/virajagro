@@ -1,0 +1,20 @@
+{
+  "name": "virajagro",
+  "version": "1.0.0",
+  "description": "Viraj Holdings - Integrated Agricultural Enterprise Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "serve": "npx http-server -p 8080 .",
+    "deploy": "git push origin main"
+  },
+  "keywords": [
+    "viraj-holdings",
+    "agriculture",
+    "fmcg",
+    "exim",
+    "agro-industries"
+  ],
+  "author": "Yakshith Mekala",
+  "license": "ISC"
+}
