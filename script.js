@@ -309,11 +309,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const playLoopBtn = document.getElementById('playLoopVideoBtn');
 
   const stageData = [
-    { tag: 'STAGE 1: AGRO INPUTS & SEEDS', sub: 'Quality Seeds, Crop Protection & Agronomy Guidance', modal: 'agro-inputs' },
-    { tag: 'STAGE 2: AGRO INDUSTRIES & GINNING', sub: 'Seed Processing, Warehousing & Cotton Ginning Mills', modal: 'agro-industries' },
-    { tag: 'STAGE 3: COMMODITY TRADING', sub: 'Direct Farm Sourcing, Quality Verification & Logistics', modal: 'commodity-trading' },
-    { tag: 'STAGE 4: GLOBAL EXIM SHIPPING', sub: 'Connecting Indian Produce with 25+ Global Markets', modal: 'export-import' },
-    { tag: 'STAGE 5: FMCG CONSUMER BRANDS', sub: 'Farm-to-Fork Pure Consumer Products & Nutrition', modal: 'fmcg' }
+    { tag: 'STAGE 1: AGRO INPUTS', sub: 'Quality Seeds & Crop Agronomy', modal: 'agro-inputs' },
+    { tag: 'STAGE 2: AGRO PROCESSING', sub: 'Processing & Cotton Ginning Mills', modal: 'agro-industries' },
+    { tag: 'STAGE 3: COMMODITY TRADING', sub: 'Direct Farm Sourcing & Logistics', modal: 'commodity-trading' },
+    { tag: 'STAGE 4: GLOBAL EXIM', sub: 'Export to 25+ Global Destinations', modal: 'export-import' },
+    { tag: 'STAGE 5: FMCG BRANDS', sub: 'Farm-to-Table Consumer Products', modal: 'fmcg' }
   ];
 
   let currentLoopStage = 0;
@@ -337,17 +337,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loopCaptionSub) loopCaptionSub.textContent = data.sub;
   };
 
-  // 5-Second Loop Scrubber Interval
+  // Exact 5-Second Total Cycle across all 5 stages (1 sec per stage)
   setInterval(() => {
     if (isLoopPaused) return;
 
-    loopProgress += 2; // update every 100ms (100% / 50 = 5s cycle)
+    loopProgress += 2; // +2% every 100ms = 100% in 5.0 seconds
     if (loopScrubber) loopScrubber.style.width = `${loopProgress}%`;
+
+    // Calculate stage based on 20% increments (5 stages total)
+    const newStageIndex = Math.min(Math.floor(loopProgress / 20), stageData.length - 1);
+    if (newStageIndex !== currentLoopStage && newStageIndex >= 0) {
+      setLoopStage(newStageIndex);
+    }
 
     if (loopProgress >= 100) {
       loopProgress = 0;
-      const nextStage = (currentLoopStage + 1) % stageData.length;
-      setLoopStage(nextStage);
+      setLoopStage(0);
     }
   }, 100);
 
