@@ -1493,12 +1493,35 @@ body.dark-theme .brand-name {
 }
 
 @media (max-width: 780px) {
+  .brand {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.45rem;
+    max-width: calc(100% - 60px);
+  }
+
+  .brand img {
+    height: 38px;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .nav-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     z-index: 100001;
     cursor: pointer;
+    margin-left: auto;
   }
 
   .nav-dropdown {
@@ -1645,34 +1668,90 @@ body.dark-theme .brand-name {
     border-radius: 1rem;
   }
 
-  /* Infinity Loop Mobile Scaling */
+  /* Infinity Loop Mobile Scaling & Node Positioning */
   .infinity-loop-showcase {
-    min-height: 360px;
-    padding: 1rem;
+    min-height: 440px;
+    padding: 1.2rem;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
   }
 
   .loop-node {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    z-index: 6;
   }
 
-  .node-1 { top: 10%; left: 6%; }
-  .node-2 { top: 16%; right: 6%; }
-  .node-3 { top: 48%; left: 42%; }
-  .node-4 { bottom: 14%; left: 6%; }
-  .node-5 { bottom: 14%; right: 6%; }
+  .node-1 { top: 20%; left: 10%; }
+  .node-2 { top: 20%; right: 10%; }
+  .node-3 { top: 40%; left: 50%; transform: translateX(-50%); }
+  .node-4 { top: 58%; left: 12%; }
+  .node-5 { top: 58%; right: 12%; }
 
+  /* Hide floating tooltips on touch screens to prevent overflow. Info displays in HUD bar! */
   .node-tooltip {
-    left: 50%;
-    width: max-content;
-    max-width: 220px;
+    display: none !important;
+  }
+
+  .loop-hud-top {
+    position: relative;
+    z-index: 8;
+    width: 100%;
+  }
+
+  .loop-stage-indicator {
+    max-width: 100%;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.7rem;
     white-space: normal;
-    font-size: 0.75rem;
+    word-break: break-word;
+  }
+
+  .loop-hud-bottom {
+    position: relative;
+    z-index: 8;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .video-caption-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding: 0.7rem 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .video-caption-bar strong {
+    font-size: 0.85rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  #loopCaptionSub {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .loop-badge-tag {
+    align-self: flex-start;
   }
 }
 
 @media (max-width: 540px) {
+  .brand img {
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
   .hero {
     padding-top: 6.5rem;
   }
