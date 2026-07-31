@@ -673,6 +673,16 @@ body.dark-theme .site-header.scrolled .brand-name {
   padding: 1.2rem 1.2rem 1.4rem;
 }
 
+.card-category {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
 .icon-badge {
   width: 44px;
   height: 44px;
