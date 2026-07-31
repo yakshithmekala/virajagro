@@ -2391,128 +2391,81 @@ body.dark-theme .site-header.scrolled .brand-name {
   background: radial-gradient(circle at center, rgba(11, 31, 58, 0.2) 0%, rgba(7, 17, 30, 0.75) 100%);
 }
 
-/* Orbiting Stage Hotspot Nodes */
+/* Orbiting Floating 3D Ecosystem Glass Cards (Matching Design Screenshot) */
 .loop-node {
   position: absolute;
-  z-index: 5;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
+  z-index: 10;
+  padding: 0.65rem 1.1rem;
+  border-radius: 1.1rem;
+  background: rgba(45, 60, 75, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 2px solid var(--green);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(30, 110, 2, 0.3);
-  display: inline-flex;
-  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  font-size: 1.3rem;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  white-space: nowrap;
 }
 
-.loop-node:hover, .loop-node.active {
-  transform: scale(1.3);
-  background: var(--navy);
-  color: white;
-  border-color: var(--yellow);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 242, 0, 0.6);
-}
-
-.node-tooltip {
-  display: none !important;
-}
-
-.node-tooltip strong {
+.loop-node .card-category {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  margin-bottom: 0.2rem;
   display: block;
-  font-size: 0.88rem;
+}
+
+.loop-node .card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.loop-node:hover,
+.loop-node.active {
+  transform: scale(1.08);
+  background: rgba(11, 31, 58, 0.92);
+  border-color: var(--yellow);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.35);
+}
+
+.loop-node:hover .card-category,
+.loop-node.active .card-category {
   color: var(--yellow);
 }
 
-.node-tooltip span {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.85);
-}
+/* Exact Positions Pinned on the 3D Infinity Loop Island (Matching Design Screenshot) */
+.node-1 { top: 12%; left: 8%; }
+.node-2 { top: 18%; right: 8%; }
+.node-3 { top: 52%; left: 22%; }
+.node-4 { bottom: 12%; left: 8%; }
+.node-5 { bottom: 12%; right: 8%; }
 
-.loop-node:hover .node-tooltip,
-.loop-node.active .node-tooltip {
-  opacity: 1;
-  pointer-events: auto;
+@media (max-width: 768px) {
+  .loop-node {
+    padding: 0.45rem 0.75rem;
+    border-radius: 0.85rem;
+  }
+  .loop-node .card-category {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+  .loop-node .card-title {
+    font-size: 0.82rem;
+  }
+  .node-1 { top: 14%; left: 4%; }
+  .node-2 { top: 18%; right: 4%; }
+  .node-3 { top: 50%; left: 16%; }
+  .node-4 { bottom: 14%; left: 4%; }
+  .node-5 { bottom: 14%; right: 4%; }
 }
-
-/* Directional Tooltip Placement (Keeps tooltips inside card bounds & away from HUD) */
-
-/* Node 1 (Top Left): Drop tooltip down-right into open sky */
-.node-1 .node-tooltip {
-  top: calc(100% + 0.6rem);
-  left: 0;
-  bottom: auto;
-  right: auto;
-  transform: translateY(-6px) scale(0.92);
-}
-.node-1:hover .node-tooltip,
-.node-1.active .node-tooltip {
-  transform: translateY(0) scale(1);
-}
-
-/* Node 2 (Top Right): Drop tooltip down-left into open sky (No collision with right border or top badge!) */
-.node-2 .node-tooltip {
-  top: calc(100% + 0.6rem);
-  right: 0;
-  left: auto;
-  bottom: auto;
-  transform: translateY(-6px) scale(0.92);
-}
-.node-2:hover .node-tooltip,
-.node-2.active .node-tooltip {
-  transform: translateY(0) scale(1);
-}
-
-/* Node 3 (Center): Float tooltip right above center button */
-.node-3 .node-tooltip {
-  bottom: calc(100% + 0.6rem);
-  left: 50%;
-  top: auto;
-  right: auto;
-  transform: translateX(-50%) translateY(6px) scale(0.92);
-}
-.node-3:hover .node-tooltip,
-.node-3.active .node-tooltip {
-  transform: translateX(-50%) translateY(0) scale(1);
-}
-
-/* Node 4 (Bottom Left): Float tooltip up-right into open sky */
-.node-4 .node-tooltip {
-  bottom: calc(100% + 0.6rem);
-  left: 0;
-  top: auto;
-  right: auto;
-  transform: translateY(6px) scale(0.92);
-}
-.node-4:hover .node-tooltip,
-.node-4.active .node-tooltip {
-  transform: translateY(0) scale(1);
-}
-
-/* Node 5 (Bottom Right): Float tooltip up-left into open sky */
-.node-5 .node-tooltip {
-  bottom: calc(100% + 0.6rem);
-  right: 0;
-  left: auto;
-  top: auto;
-  transform: translateY(6px) scale(0.92);
-}
-.node-5:hover .node-tooltip,
-.node-5.active .node-tooltip {
-  transform: translateY(0) scale(1);
-}
-
-/* Positions around the infinity loop path */
-.node-1 { top: 18%; left: 16%; }
-.node-2 { top: 22%; right: 16%; }
-.node-3 { top: 48%; left: 50%; transform: translateX(-50%); }
-.node-4 { bottom: 22%; left: 16%; }
-.node-5 { bottom: 22%; right: 16%; }
 
 /* HUD Top & Bottom Overlay */
 .infinity-loop-showcase {
