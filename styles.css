@@ -2391,17 +2391,15 @@ body.dark-theme .site-header.scrolled .brand-name {
   background: radial-gradient(circle at center, rgba(11, 31, 58, 0.2) 0%, rgba(7, 17, 30, 0.75) 100%);
 }
 
-/* Orbiting Floating 3D Ecosystem Glass Cards (Matching Design Screenshot) */
+/* Orbiting Floating 3D Ecosystem White Cards (Matching Design Screenshot Exactly) */
 .loop-node {
   position: absolute;
   z-index: 10;
-  padding: 0.65rem 1.1rem;
-  border-radius: 1.1rem;
-  background: rgba(45, 60, 75, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  padding: 0.75rem 1.2rem;
+  border-radius: 1.25rem;
+  background: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28), 0 4px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2412,41 +2410,46 @@ body.dark-theme .site-header.scrolled .brand-name {
 }
 
 .loop-node .card-category {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.18em !important;
   text-transform: uppercase;
-  color: #cbd5e1;
-  margin-bottom: 0.2rem;
+  color: var(--green) !important;
+  margin-bottom: 0.25rem;
   display: block;
 }
 
 .loop-node .card-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+  color: var(--navy) !important;
   line-height: 1.2;
 }
 
 .loop-node:hover,
 .loop-node.active {
-  transform: scale(1.08);
-  background: rgba(11, 31, 58, 0.92);
-  border-color: var(--yellow);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.35);
+  transform: scale(1.08) !important;
+  background: #ffffff !important;
+  border-color: var(--green) !important;
+  box-shadow: 0 18px 40px rgba(30, 110, 2, 0.35), 0 0 20px rgba(30, 110, 2, 0.2) !important;
 }
 
 .loop-node:hover .card-category,
 .loop-node.active .card-category {
-  color: var(--yellow);
+  color: var(--green) !important;
+}
+
+.loop-node:hover .card-title,
+.loop-node.active .card-title {
+  color: var(--navy) !important;
 }
 
 /* Exact Positions Pinned on the 3D Infinity Loop Island (Matching Design Screenshot) */
-.node-1 { top: 12%; left: 8%; }
-.node-2 { top: 18%; right: 8%; }
-.node-3 { top: 52%; left: 22%; }
-.node-4 { bottom: 12%; left: 8%; }
-.node-5 { bottom: 12%; right: 8%; }
+.node-1 { top: 10%; left: 8%; }
+.node-2 { top: 16%; right: 8%; }
+.node-3 { top: 52%; left: 20%; }
+.node-4 { bottom: 10%; left: 8%; }
+.node-5 { bottom: 10%; right: 8%; }
 
 @media (max-width: 768px) {
   .loop-node {
@@ -2454,17 +2457,17 @@ body.dark-theme .site-header.scrolled .brand-name {
     border-radius: 0.85rem;
   }
   .loop-node .card-category {
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
+    font-size: 0.62rem !important;
+    letter-spacing: 0.14em !important;
   }
   .loop-node .card-title {
-    font-size: 0.82rem;
+    font-size: 0.82rem !important;
   }
-  .node-1 { top: 14%; left: 4%; }
-  .node-2 { top: 18%; right: 4%; }
-  .node-3 { top: 50%; left: 16%; }
-  .node-4 { bottom: 14%; left: 4%; }
-  .node-5 { bottom: 14%; right: 4%; }
+  .node-1 { top: 12%; left: 4%; }
+  .node-2 { top: 16%; right: 4%; }
+  .node-3 { top: 50%; left: 14%; }
+  .node-4 { bottom: 12%; left: 4%; }
+  .node-5 { bottom: 12%; right: 4%; }
 }
 
 /* HUD Top & Bottom Overlay */
