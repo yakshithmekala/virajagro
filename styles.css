@@ -97,7 +97,7 @@ body {
 }
 
 .hero.fmcg-hero {
-  background: #000000 !important;
+  background: linear-gradient(135deg, #070d14 0%, #0b1812 50%, #060e0a 100%) !important;
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
@@ -144,7 +144,7 @@ body {
 
 .fmcg-btn-gold {
   background: #eab308 !important;
-  color: #000000 !important;
+  color: #070d14 !important;
   font-weight: 800 !important;
   border: none !important;
   box-shadow: 0 8px 24px rgba(234, 179, 8, 0.35);
@@ -166,37 +166,39 @@ body {
   border-color: #ffffff !important;
 }
 
-/* Pure Black Boxless Logo Placement (Zero Box, Pure Black Background) */
+/* Luxury Dark Hero Logo Badge (Gold Rimmed Glass Card) */
 .fmcg-hero-brand-clean {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 !important;
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  padding: 0.8rem;
+  background: rgba(18, 30, 22, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  border-radius: 1.8rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   width: 100%;
   max-width: 520px;
   margin-left: 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.fmcg-hero-brand-clean:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(234, 179, 8, 0.25);
+  border-color: #eab308;
 }
 
 .fmcg-brand-logo-clean-img {
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   height: auto;
   object-fit: contain;
-  border-radius: 0 !important;
+  border-radius: 1.4rem;
   display: block;
-  box-shadow: none !important;
-  filter: none !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.fmcg-brand-logo-clean-img:hover {
-  transform: scale(1.03);
 }
 
 .business-page-content {
