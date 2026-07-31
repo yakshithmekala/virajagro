@@ -2391,15 +2391,17 @@ body.dark-theme .site-header.scrolled .brand-name {
   background: radial-gradient(circle at center, rgba(11, 31, 58, 0.2) 0%, rgba(7, 17, 30, 0.75) 100%);
 }
 
-/* Orbiting Floating 3D Ecosystem White Cards (Matching Design Screenshot Exactly) */
+/* Orbiting Floating 3D Ecosystem Glass Cards (Frosted Glassmorphism Theme) */
 .loop-node {
   position: absolute;
   z-index: 10;
   padding: 0.75rem 1.2rem;
   border-radius: 1.25rem;
-  background: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.9) !important;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28), 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: rgba(15, 32, 55, 0.65) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2412,9 +2414,9 @@ body.dark-theme .site-header.scrolled .brand-name {
 .loop-node .card-category {
   font-size: 0.75rem !important;
   font-weight: 800 !important;
-  letter-spacing: 0.18em !important;
+  letter-spacing: 0.22em !important;
   text-transform: uppercase;
-  color: var(--green) !important;
+  color: #a3e635 !important;
   margin-bottom: 0.25rem;
   display: block;
 }
@@ -2422,26 +2424,26 @@ body.dark-theme .site-header.scrolled .brand-name {
 .loop-node .card-title {
   font-size: 1.1rem !important;
   font-weight: 800 !important;
-  color: var(--navy) !important;
+  color: #ffffff !important;
   line-height: 1.2;
 }
 
 .loop-node:hover,
 .loop-node.active {
   transform: scale(1.08) !important;
-  background: #ffffff !important;
-  border-color: var(--green) !important;
-  box-shadow: 0 18px 40px rgba(30, 110, 2, 0.35), 0 0 20px rgba(30, 110, 2, 0.2) !important;
+  background: rgba(11, 31, 58, 0.92) !important;
+  border-color: var(--yellow) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), 0 0 25px rgba(255, 215, 0, 0.4) !important;
 }
 
 .loop-node:hover .card-category,
 .loop-node.active .card-category {
-  color: var(--green) !important;
+  color: var(--yellow) !important;
 }
 
 .loop-node:hover .card-title,
 .loop-node.active .card-title {
-  color: var(--navy) !important;
+  color: #ffffff !important;
 }
 
 /* Exact Positions Pinned on the 3D Infinity Loop Island (Matching Design Screenshot) */
