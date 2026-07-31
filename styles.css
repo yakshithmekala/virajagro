@@ -1472,7 +1472,11 @@ p {
 
 @media (max-width: 780px) {
   .nav-toggle {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100001;
+    cursor: pointer;
   }
 
   .nav-dropdown {
@@ -1482,6 +1486,10 @@ p {
   .dropdown-toggle {
     width: 100%;
     text-align: left;
+    color: var(--navy) !important;
+    padding: 0.7rem 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
   }
 
   .dropdown-menu {
@@ -1491,30 +1499,78 @@ p {
     pointer-events: auto;
     transform: none;
     box-shadow: none;
-    border: 0;
-    padding: 0 0 0 0.4rem;
-    background: transparent;
+    border: 1px solid rgba(11, 31, 58, 0.08);
+    padding: 0.6rem;
+    background: #f4efe8;
+    border-radius: 0.8rem;
     display: none;
+    width: 100%;
   }
 
   .dropdown-menu.open {
     display: grid;
   }
 
+  .dropdown-menu a {
+    color: var(--navy) !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+  }
+
   .nav-links {
     position: absolute;
-    inset: calc(100% + .2rem) 1rem auto 1rem;
+    inset: calc(100% + .4rem) 1rem auto 1rem;
+    width: calc(100% - 2rem);
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
-    border-radius: 1rem;
-    background: rgba(255, 255, 255, .98);
-    color: var(--navy);
-    box-shadow: var(--shadow);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    background: rgba(255, 255, 255, 0.99);
+    color: var(--navy) !important;
+    box-shadow: 0 20px 50px rgba(7, 17, 30, 0.3);
+    border: 1px solid rgba(11, 31, 58, 0.12);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
     transition: opacity var(--transition), transform var(--transition);
+    z-index: 100000;
+  }
+
+  .nav-links a {
+    color: var(--navy) !important;
+    font-size: 1.05rem;
+    font-weight: 700;
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid rgba(11, 31, 58, 0.06);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  body.dark-theme .nav-links {
+    background: #0d1b2a !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  }
+
+  body.dark-theme .nav-links a,
+  body.dark-theme .dropdown-toggle {
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  body.dark-theme .dropdown-menu {
+    background: #172a45 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  body.dark-theme .dropdown-menu a {
+    color: #f1f5f9 !important;
   }
 
   .nav-links.open {
@@ -1525,6 +1581,10 @@ p {
 
   .nav-cta {
     margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   .hero-stats,
@@ -1540,7 +1600,9 @@ p {
   }
 
   .hero-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
   }
 
   .cta-box {
@@ -1560,6 +1622,32 @@ p {
     min-width: auto;
     border-radius: 1rem;
   }
+
+  /* Infinity Loop Mobile Scaling */
+  .infinity-loop-showcase {
+    min-height: 360px;
+    padding: 1rem;
+  }
+
+  .loop-node {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .node-1 { top: 10%; left: 6%; }
+  .node-2 { top: 16%; right: 6%; }
+  .node-3 { top: 48%; left: 42%; }
+  .node-4 { bottom: 14%; left: 6%; }
+  .node-5 { bottom: 14%; right: 6%; }
+
+  .node-tooltip {
+    left: 50%;
+    width: max-content;
+    max-width: 220px;
+    white-space: normal;
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 540px) {
@@ -1568,22 +1656,59 @@ p {
   }
 
   h1 {
-    font-size: clamp(2rem, 8vw, 2.8rem);
+    font-size: clamp(1.8rem, 7.5vw, 2.5rem);
+    line-height: 1.25;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
   }
 
   .hero-actions,
   .cta-actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.8rem;
   }
 
   .button {
     width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   .floating-card {
     font-size: 0.85rem;
     padding: 0.8rem 1rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .quick-modal-card {
+    padding: 1.4rem;
+    width: 95%;
+  }
+
+  .modal-title {
+    font-size: 1.35rem;
+  }
+
+  .modal-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tab-btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
