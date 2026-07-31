@@ -97,7 +97,35 @@ body {
 }
 
 .hero.fmcg-hero {
-  background: linear-gradient(110deg, rgba(8, 16, 30, .75), rgba(11, 31, 58, .55)), url('forefathers-naturals.png') center/cover no-repeat fixed;
+  background: linear-gradient(110deg, rgba(8, 16, 30, .85), rgba(11, 31, 58, .65)), url('forefathers-naturals.png') center/cover no-repeat;
+}
+
+.fmcg-hero-brand-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(11, 31, 58, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.fmcg-hero-brand-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(30, 110, 2, 0.35);
+  border-color: var(--yellow);
+}
+
+.fmcg-brand-logo-img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .business-page-content {
