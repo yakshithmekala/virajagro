@@ -673,14 +673,66 @@ body.dark-theme .site-header.scrolled .brand-name {
   padding: 1.2rem 1.2rem 1.4rem;
 }
 
+.business-card {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.3s ease;
+}
+
+.business-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--yellow);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 25px rgba(255, 215, 0, 0.15);
+}
+
 .card-category {
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--green);
-  margin-bottom: 0.2rem;
+  color: #cbd5e1;
+  margin-bottom: 0.35rem;
   display: block;
+}
+
+.business-card h3 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.business-card p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.business-card .icon-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.business-card .button-link {
+  color: var(--yellow);
+}
+
+.business-card .button-link:hover {
+  color: #ffffff;
+}
+
+.business-card .quick-preview-btn {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.business-card .quick-preview-btn:hover {
+  background: var(--yellow);
+  color: #0b1f3a;
+  border-color: var(--yellow);
 }
 
 .icon-badge {
