@@ -267,8 +267,12 @@ p {
   white-space: nowrap;
 }
 
-.site-header.scrolled .brand-name,
-body.dark-theme .brand-name {
+.site-header.scrolled .brand-name {
+  color: var(--navy);
+}
+
+body.dark-theme .brand-name,
+body.dark-theme .site-header.scrolled .brand-name {
   color: #ffffff;
 }
 
