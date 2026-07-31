@@ -631,7 +631,6 @@ body.dark-theme .site-header.scrolled .brand-name {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.business-card,
 .feature-card,
 .Blogs-card,
 .info-card {
@@ -643,7 +642,6 @@ body.dark-theme .site-header.scrolled .brand-name {
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
-.business-card:hover,
 .feature-card:hover,
 .Blogs-card:hover,
 .info-card:hover {
@@ -673,66 +671,84 @@ body.dark-theme .site-header.scrolled .brand-name {
   padding: 1.2rem 1.2rem 1.4rem;
 }
 
+/* Business Enterprise Cards - Dark Slate Theme (Matching Pic 1) */
 .business-card {
-  background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 1.25rem;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.business-card.hidden {
+  display: none !important;
 }
 
 .business-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: var(--yellow);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 25px rgba(255, 215, 0, 0.15);
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: var(--yellow) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 25px rgba(255, 215, 0, 0.18) !important;
 }
 
-.card-category {
+.business-card .card-category {
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #cbd5e1;
+  color: #cbd5e1 !important;
   margin-bottom: 0.35rem;
   display: block;
 }
 
-.business-card h3 {
-  color: #ffffff;
+.business-card h3,
+.business-card .card-content h3 {
+  color: #ffffff !important;
   font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 0.6rem;
 }
 
-.business-card p {
-  color: rgba(255, 255, 255, 0.82);
+.business-card p,
+.business-card .card-content p:not(.card-category) {
+  color: rgba(255, 255, 255, 0.82) !important;
 }
 
 .business-card .icon-badge {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
 }
 
 .business-card .button-link {
-  color: var(--yellow);
+  color: var(--yellow) !important;
+  font-weight: 700;
 }
 
 .business-card .button-link:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .business-card .quick-preview-btn {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-left: auto;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
 
 .business-card .quick-preview-btn:hover {
-  background: var(--yellow);
-  color: #0b1f3a;
-  border-color: var(--yellow);
+  background: var(--yellow) !important;
+  color: #0b1f3a !important;
+  border-color: var(--yellow) !important;
 }
 
 .icon-badge {
